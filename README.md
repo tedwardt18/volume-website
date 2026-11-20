@@ -31,7 +31,7 @@ Output directory: `dist/`
 | Build output directory | `dist` |
 | Root directory | `/` (repo root) |
 
-SPA fallback is provided by `public/_redirects` (`/* /index.html 200`) so direct routes and refreshes work.
+SPA fallback: do **not** ship `/* /index.html 200` in `_redirects` — Cloudflare Pages rejects that with error 100324 (infinite loop vs clean-URL / `.html` stripping). With no top-level `404.html`, Pages already serves `/` for unmatched paths so client routes and refreshes work.
 
 ## Config
 
