@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Seo } from '../components/Seo'
-import { isPlaceholder, mailtoSupport, siteConfig } from '../config/site'
+import { mailtoSupport, siteConfig } from '../config/site'
 
 const faqs = [
   {
@@ -54,26 +54,15 @@ export function Support() {
       <section className="section">
         <div className="container prose">
           <h2>Contact</h2>
-          {supportHref ? (
-            <div className="support-panel">
-              <p>
-                Email{' '}
-                <a href={supportHref}>{siteConfig.supportEmail}</a>
-                . We aim to respond as soon as we can.
-              </p>
-            </div>
-          ) : (
-            <div className="support-panel">
-              <p>
-                Support email is not confirmed yet. Once set in <code>src/config/site.ts</code>, this
-                page will offer a mailto contact link.
-              </p>
-              <p className="confirm-note">
-                PLACEHOLDER_SUPPORT_EMAIL — owner must confirm the official inbox before go-live.
-                {isPlaceholder(siteConfig.supportEmail) ? '' : ''}
-              </p>
-            </div>
-          )}
+          <div className="support-panel">
+            <p>
+              Email{' '}
+              <a href={supportHref ?? `mailto:${siteConfig.supportEmail}`}>
+                {siteConfig.supportEmail}
+              </a>
+              . We aim to respond as soon as we can.
+            </p>
+          </div>
 
           <h2>FAQs</h2>
           <div className="faq-list">
@@ -114,8 +103,7 @@ export function Support() {
               <h3>Account deletion</h3>
               <p>
                 Request deletion in-app or via email. Related details are in the{' '}
-                <Link to="/privacy">Privacy Policy</Link>. Legal wording still needs owner
-                confirmation before publication.
+                <Link to="/privacy">Privacy Policy</Link>.
               </p>
             </article>
           </div>
