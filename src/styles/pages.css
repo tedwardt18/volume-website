@@ -12,9 +12,9 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(115deg, rgba(238, 241, 237, 0.2) 0%, rgba(238, 241, 237, 0.75) 42%, rgba(238, 241, 237, 0.35) 100%),
-    radial-gradient(ellipse 70% 55% at 78% 42%, rgba(198, 240, 0, 0.22), transparent 60%),
-    linear-gradient(180deg, #d9dfd6 0%, #eef1ed 55%, #dfe5dc 100%);
+    linear-gradient(115deg, rgba(7, 9, 8, 0.35) 0%, rgba(7, 9, 8, 0.82) 46%, rgba(7, 9, 8, 0.4) 100%),
+    radial-gradient(ellipse 70% 55% at 78% 42%, rgba(198, 240, 0, 0.14), transparent 60%),
+    linear-gradient(180deg, #101411 0%, #080a09 55%, #050705 100%);
 }
 
 .home-hero__bg::after {
@@ -23,13 +23,13 @@
   inset: auto -10% -20% 35%;
   height: 70%;
   background:
-    radial-gradient(closest-side, rgba(16, 20, 24, 0.18), transparent 70%),
+    radial-gradient(closest-side, rgba(198, 240, 0, 0.08), transparent 70%),
     repeating-linear-gradient(
       -18deg,
       transparent 0 14px,
-      rgba(16, 20, 24, 0.04) 14px 15px
+      rgba(242, 244, 240, 0.035) 14px 15px
     );
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .home-hero__grid {
@@ -140,8 +140,9 @@
   position: relative;
   overflow: hidden;
   padding: clamp(3.5rem, 7vw, 5rem) 0;
-  background: var(--ink);
-  color: var(--white);
+  background: #0e1210;
+  color: var(--ink);
+  border-block: 1px solid var(--line);
 }
 
 .cta-band::before {
@@ -149,7 +150,7 @@
   position: absolute;
   inset: auto -10% -40% 40%;
   height: 120%;
-  background: radial-gradient(closest-side, rgba(198, 240, 0, 0.28), transparent 70%);
+  background: radial-gradient(closest-side, rgba(198, 240, 0, 0.2), transparent 70%);
   pointer-events: none;
 }
 
@@ -167,12 +168,12 @@
 
 .cta-band p {
   max-width: 34rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--ink-soft);
 }
 
 .cta-band .confirm-note {
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
 }
 
 .features-page .feature-detail {
@@ -240,7 +241,7 @@
 .faq-item {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.03);
   overflow: hidden;
 }
 
@@ -277,11 +278,12 @@
   padding: 1.25rem 1.35rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .support-panel a {
   font-weight: 700;
+  color: var(--lime);
 }
 
 .guide-grid {

@@ -54,8 +54,8 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  backdrop-filter: blur(14px);
-  background: rgba(238, 241, 237, 0.82);
+  backdrop-filter: blur(16px);
+  background: rgba(7, 9, 8, 0.82);
   border-bottom: 1px solid var(--line);
 }
 
@@ -85,7 +85,7 @@
 .site-nav__link:hover,
 .site-nav__link.is-active {
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .site-nav__link.is-active {
@@ -113,13 +113,14 @@
   height: 2.6rem;
   border: 1px solid var(--line-strong);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.04);
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.35rem;
   cursor: pointer;
+  color: var(--ink);
 }
 
 .menu-toggle span:not(.visually-hidden) {
@@ -142,7 +143,7 @@
   position: fixed;
   inset: var(--nav-h) 0 0;
   z-index: 50;
-  background: #f3f5f1;
+  background: #0a0d0b;
   padding: 1.5rem;
   transform: translateY(-8px);
   opacity: 0;
@@ -180,12 +181,13 @@
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 700;
-  background: #ffffff;
+  background: var(--surface);
   border: 1px solid var(--line);
+  color: var(--ink);
 }
 
 .mobile-menu__link.is-active {
-  border-color: var(--ink);
+  border-color: rgba(198, 240, 0, 0.35);
   box-shadow: inset 4px 0 0 var(--lime);
 }
 
@@ -193,7 +195,7 @@
   margin-top: 2rem;
   padding: 3.5rem 0 2rem;
   border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, transparent, rgba(16, 20, 24, 0.03));
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.35));
 }
 
 .site-footer__grid {
@@ -220,6 +222,7 @@
 
 .site-footer__nav a:hover {
   text-decoration: underline;
+  color: var(--lime);
 }
 
 .site-footer__meta {
@@ -243,6 +246,7 @@
 
 .site-footer code {
   font-size: 0.85em;
+  color: var(--ink-soft);
 }
 
 @media (min-width: 860px) {
