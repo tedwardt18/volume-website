@@ -31,11 +31,7 @@ export function Privacy() {
           </p>
           <p>
             <strong>Contact:</strong>{' '}
-            {supportHref ? (
-              <a href={supportHref}>{supportEmail}</a>
-            ) : (
-              <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
-            )}
+            <a href={supportHref ?? `mailto:${supportEmail}`}>{supportEmail}</a>
           </p>
           <p>
             Volume (“the app”, “we”) is a strength-training and nutrition tracker. This policy
@@ -225,15 +221,11 @@ export function Privacy() {
             <li>
               <strong>Email us:</strong> to ask about your data, request a copy, or request
               deletion, write to{' '}
-              {supportHref ? (
-                <a href={supportHref}>{supportEmail}</a>
-              ) : (
-                <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
-              )}
-              . Depending on where you live (for example the UK, the European Economic Area, or
-              California), you may have rights to access, correct, delete, restrict, object to, or
-              port your data, and to complain to your data-protection authority. We will respond
-              within the time the law requires.
+              <a href={supportHref ?? `mailto:${supportEmail}`}>{supportEmail}</a>. Depending on
+              where you live (for example the UK, the European Economic Area, or California), you
+              may have rights to access, correct, delete, restrict, object to, or port your data,
+              and to complain to your data-protection authority. We will respond within the time the
+              law requires.
             </li>
           </ul>
 
@@ -274,11 +266,7 @@ export function Privacy() {
           <h2>11. Contact</h2>
           <p>
             Questions, requests, or concerns:{' '}
-            {supportHref ? (
-              <a href={supportHref}>{supportEmail}</a>
-            ) : (
-              <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
-            )}
+            <a href={supportHref ?? `mailto:${supportEmail}`}>{supportEmail}</a>
           </p>
         </div>
       </section>

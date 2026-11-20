@@ -151,13 +151,9 @@ export function Terms() {
           <h2>12. Contact</h2>
           <p>
             Questions about these Terms:{' '}
-            {supportHref ? (
-              <a href={supportHref}>{siteConfig.supportEmail}</a>
-            ) : (
-              <span>
-                <code>{siteConfig.supportEmail}</code> (placeholder)
-              </span>
-            )}
+            <a href={supportHref ?? `mailto:${siteConfig.supportEmail}`}>
+              {siteConfig.supportEmail}
+            </a>
           </p>
         </div>
       </section>
