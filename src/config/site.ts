@@ -21,11 +21,8 @@ export const siteConfig = {
    */
   appStoreUrl: 'PLACEHOLDER_APP_STORE_URL',
 
-  /**
-   * Primary support contact.
-   * PLACEHOLDER — confirm the official support inbox (volume-privacy had no email yet).
-   */
-  supportEmail: 'PLACEHOLDER_SUPPORT_EMAIL',
+  /** Primary support contact. */
+  supportEmail: 'support@trainwithvolume.com',
 
   social: {
     /** PLACEHOLDER — confirm before linking in footer/nav. */
