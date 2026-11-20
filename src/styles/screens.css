@@ -1,0 +1,220 @@
+.phone-frame {
+  margin: 0;
+  width: min(100%, 280px);
+}
+
+.phone-float {
+  animation: floatY 5.5s ease-in-out infinite;
+}
+
+.phone-frame__shell {
+  position: relative;
+  border-radius: var(--radius-phone);
+  padding: 0.55rem;
+  background: linear-gradient(160deg, #2a3036, #12161a 55%, #0b0e10);
+  box-shadow: var(--shadow-phone);
+}
+
+.phone-frame__notch {
+  position: absolute;
+  top: 0.85rem;
+  left: 50%;
+  width: 28%;
+  height: 0.85rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #050607;
+  z-index: 2;
+}
+
+.phone-frame__screen {
+  overflow: hidden;
+  border-radius: calc(var(--radius-phone) - 6px);
+  background: var(--app-bg);
+  aspect-ratio: 9 / 19.2;
+}
+
+.app-screen {
+  height: 100%;
+  padding: 2.1rem 0.9rem 1rem;
+  color: #edf2ec;
+  background:
+    radial-gradient(120% 60% at 50% -10%, rgba(198, 240, 0, 0.12), transparent 55%),
+    var(--app-bg);
+  font-size: 0.78rem;
+}
+
+.app-screen__top {
+  display: grid;
+  gap: 0.15rem;
+  margin-bottom: 1rem;
+}
+
+.app-screen__top span,
+.app-screen__top em {
+  color: rgba(237, 242, 236, 0.55);
+  font-style: normal;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.app-screen__top strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+}
+
+.app-screen__card {
+  padding: 0.8rem;
+  margin-bottom: 0.55rem;
+  border-radius: 14px;
+  background: var(--app-panel);
+  border: 1px solid var(--app-line);
+}
+
+.app-screen__card--muted {
+  opacity: 0.72;
+}
+
+.app-screen__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 650;
+}
+
+.app-pill {
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  background: var(--lime);
+  color: #101418;
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.app-sets {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+}
+
+.app-sets > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.app-sets > div.is-active {
+  background: rgba(198, 240, 0, 0.12);
+  outline: 1px solid rgba(198, 240, 0, 0.35);
+}
+
+.app-hint {
+  margin-top: 0.55rem;
+  color: rgba(237, 242, 236, 0.58);
+  line-height: 1.35;
+}
+
+.app-score {
+  padding: 0.95rem;
+  margin-bottom: 0.75rem;
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(198, 240, 0, 0.16), rgba(23, 28, 25, 0.9));
+  border: 1px solid rgba(198, 240, 0, 0.22);
+}
+
+.app-score span {
+  display: block;
+  color: rgba(237, 242, 236, 0.62);
+  margin-bottom: 0.25rem;
+}
+
+.app-score strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+}
+
+.app-score p {
+  margin-top: 0.4rem;
+  color: rgba(237, 242, 236, 0.62);
+}
+
+.app-score--ring {
+  text-align: center;
+}
+
+.app-score--ring strong {
+  font-size: 2.4rem;
+  color: var(--lime);
+}
+
+.app-bars {
+  display: flex;
+  align-items: end;
+  gap: 0.35rem;
+  height: 4.5rem;
+  margin: 0.4rem 0 0.9rem;
+  padding: 0 0.15rem;
+}
+
+.app-bars span {
+  flex: 1;
+  border-radius: 5px 5px 2px 2px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.app-bars span.is-accent {
+  background: var(--lime);
+}
+
+.app-bars--wide {
+  height: 5.2rem;
+}
+
+.app-list {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.app-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0.65rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--app-line);
+}
+
+.app-macros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.app-macros > div {
+  padding: 0.65rem;
+  border-radius: 12px;
+  background: var(--app-panel);
+  border: 1px solid var(--app-line);
+}
+
+.app-macros strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.app-macros span {
+  color: rgba(237, 242, 236, 0.55);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
