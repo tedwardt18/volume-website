@@ -23,15 +23,20 @@ npm run build
 
 Output directory: `dist/`
 
-## Cloudflare Pages
+## Cloudflare (Workers Builds / Pages)
+
+This site deploys via Cloudflare **Workers Builds** (static assets), which runs `npm run build` then `npx wrangler deploy`.
 
 | Setting | Value |
 | --- | --- |
 | Build command | `npm run build` |
-| Build output directory | `dist` |
+| Deploy command | `npx wrangler deploy` (default) |
+| Assets | `dist/` via `wrangler.jsonc` |
 | Root directory | `/` (repo root) |
 
-SPA fallback is provided by `public/_redirects` (`/* /index.html 200`) so direct routes and refreshes work.
+SPA fallback is configured in `wrangler.jsonc` as `assets.not_found_handling = "single-page-application"` so direct routes and refreshes (`/features`, `/support`, etc.) work.
+
+Do **not** ship `/* /index.html 200` in `_redirects` — Cloudflare rejects that with error **100324** (infinite loop vs clean-URL / `.html` stripping).
 
 ## Config
 
